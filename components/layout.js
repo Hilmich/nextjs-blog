@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
+import utilStyles from '@styles/utils.module.css'
 import Link from 'next/link'
 
-const name = 'Hilmar'
-export const siteTitle = 'Next.js Sample Website'
+const name = 'Kiwanis'
+export const siteTitle = 'Kiwanis'
 
 export default function Layout({ children, home }) {
   return (
@@ -30,13 +30,12 @@ export default function Layout({ children, home }) {
           <>
             <Image
               priority
-              src="/images/profile.jpg"
+              src="/images/KiwanisLogo.png"
               className={utilStyles.borderCircle}
-              height={144}
-              width={144}
+              height={288}
+              width={442}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
         ) : (
           <>
@@ -64,10 +63,19 @@ export default function Layout({ children, home }) {
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
-            <a>← Back to home</a>
+            <a>← aftur til forsíðu</a>
           </Link>
         </div>
       )}
+      <footer>
+      <blockquote>Kiwanis stuðlar børnum umvegis millum annað jólatræssølu og lutaseðlasølu á Ólavsøku</blockquote>        
+        <h4>Tað eru 3. Kiwanis felagsskapir í Føroyum.</h4>
+        <p>Kiwanis Tórshavn og Kiwanis Rósan í Havn, og Kiwanis Eysturoy, sum hevur heimstað í Gøtu. 
+        <blockquote>Orðið “kiwanis” stavar úr indianskum máli og merkir “vit byggja.”</blockquote>
+        <b>Nevndin í Kiwanis Tórshavn</b>
+        </p>
+
+      </footer>
     </div>
   )
 }
